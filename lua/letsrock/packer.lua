@@ -30,4 +30,13 @@ return require('packer').startup(function(use)
   use({'neovim/nvim-lspconfig'})
   use({'hrsh7th/nvim-cmp'})
   use({'hrsh7th/cmp-nvim-lsp'})
+
+  -- nvim v0.7.2
+  use({
+	  "kdheepak/lazygit.nvim",
+	  -- optional for floating window border decoration
+	  requires = {
+		  "nvim-lua/plenary.nvim",
+	  },
+  })
 end)
