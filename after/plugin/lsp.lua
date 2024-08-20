@@ -31,7 +31,7 @@ cmp.setup({
     expand = function(args)
       -- You need Neovim v0.10 to use vim.snippet
       vim.snippet.expand(args.body)
-    end,
+    end
   },
-  mapping <cr>"= cmp.mapping.preset.insert({}),
+  mapping = cmp.mapping.preset.insert({})
 })

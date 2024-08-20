@@ -25,10 +25,17 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
+
+  -- Load everything for the lsp config
   use({'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'})
-  use({'neovim/nvim-lspconfig'})
   use({'hrsh7th/nvim-cmp'})
   use({'hrsh7th/cmp-nvim-lsp'})
+  use({'neovim/nvim-lspconfig'})
+  use({'williamboman/mason.nvim'})
+  use({'williamboman/mason-lspconfig.nvim'}) 
+
+  -- Vim-Be-Good
+  use({'ThePrimeagen/vim-be-good'}) 
 
   -- nvim v0.7.2
   use({
