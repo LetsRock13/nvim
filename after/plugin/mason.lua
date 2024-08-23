@@ -1,6 +1,6 @@
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = {'ast-grep'},
+	ensure_installed = {'rust_analyzer', 'jdtls', 'clangd', 'ast_grep', 'lua_ls'},
 	handlers = {
 		function(server_name)
 			require('lspconfig')[server_name].setup({})
