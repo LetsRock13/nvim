@@ -23,7 +23,7 @@ lsp_zero.extend_lspconfig({
 
 local cmp = require("cmp")
 
-c,,mp.setup({
+cmp.setup({
   sources = {
     {name = "nvim_lsp"},
   },
