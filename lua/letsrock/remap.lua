@@ -8,8 +8,8 @@ vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 
 -- Move text up and down
-vim.keymap.set("n", "<A-j>", "<Esc>:m .+1<CR>==gi")
-vim.keymap.set("n", "<A-k>", "<Esc>:m .-2<CR>==gi")
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>")
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>")
 
 -- Stay in indent mode
 vim.keymap.set("v", "<", "<gv")
