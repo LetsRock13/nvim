@@ -55,4 +55,9 @@ return require('packer').startup(function(use)
   use({
 	  "mg979/vim-visual-multi"
   })
+
+  -- chentoast/marks
+  use ({
+  	"chentoast/marks.nvim"
+  })
 end)
