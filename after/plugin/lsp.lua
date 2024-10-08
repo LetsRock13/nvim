@@ -17,21 +17,25 @@ end
 
 lsp_zero.extend_lspconfig({
   sign_text = true,
-  lsp_attach = lsp_attach,
-  capabilities = require("cmp_nvim_lsp").default_capabilities()
+  lsp_attach = lsp_attach
 })
 
 local cmp = require("cmp")
 
 cmp.setup({
-  sources = {
+  sources = cmp.config.sources({ 
     {name = "nvim_lsp"},
-  },
-  mapping = cmp.mapping.preset.insert({}),
+    {name = "luasnip"},
+  },{
+	{name = "buffer"},
+  }),
+  mapping = cmp.mapping.preset.insert({
+	['<TAB>'] = cmp.mapping.confirm({select = true}),
+  }),
   snippet = {
     expand = function(args)
       -- You need Neovim v0.10 to use vim.snippet
-      vim.snippet.expand(args.body)
+      require('luasnip').lsp_expand(args.body)
     end
   }
 })
