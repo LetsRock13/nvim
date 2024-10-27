@@ -68,7 +68,15 @@ return {
 		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 		dependencies = { "rafamadriz/friendly-snippets" },
 	},
-	{ 'saadparwaiz1/cmp_luasnip' }
+	{ 'saadparwaiz1/cmp_luasnip' },
+	{ 
+		"nvim-tree/nvim-tree.lua",
+  		version = "*",
+  		lazy = false,
+  		dependencies = {
+  		  "nvim-tree/nvim-web-devicons",
+  		}
+	}
 }
 
 
