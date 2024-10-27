@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeToggle)
 
 -- Resize with arrows
 vim.keymap.set("n", "<C-Up>", ":resize -2<CR>")
