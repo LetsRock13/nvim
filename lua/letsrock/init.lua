@@ -1,3 +1,3 @@
 require("letsrock.remap")
-require("letsrock.options")
 require("letsrock.lazy")
+require("letsrock.options")
