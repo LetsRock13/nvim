@@ -1,6 +1,11 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeToggle)
 
+-- Save the file
+vim.keymap.set("n", "<C-s>", ":w<CR>")
+vim.keymap.set("n", "<CS-s>", ":wq<CR>")
+vim.keymap.set("i", "<C-s>", "<ESC>:w<CR>")
+
 -- Resize with arrows
 vim.keymap.set("n", "<C-Up>", ":resize -2<CR>")
 vim.keymap.set("n", "<C-Down>", ":resize +2<CR>")
@@ -51,7 +56,3 @@ vim.keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
 -- LazyGit --
 vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>")
-
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
