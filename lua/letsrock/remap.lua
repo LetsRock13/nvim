@@ -1,10 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeToggle)
-
--- Save the file
-vim.keymap.set("n", "<C-s>", ":w<CR>")
-vim.keymap.set("n", "<CS-s>", ":wq<CR>")
-vim.keymap.set("i", "<C-s>", "<ESC>:w<CR>")
+vim.keymap.set("n", "<leader>pv", vim.cmd.Explore)
 
 -- Resize with arrows
 vim.keymap.set("n", "<C-Up>", ":resize -2<CR>")
@@ -37,9 +32,9 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 
 vim.keymap.set("i", "<C-c>", "<ESC>")
 -- Add a new line without insert mode
-vim.keymap.set("n", "<A-o>", "o<ESC>") 
+vim.keymap.set("n", "<A-o>", "o<ESC>")
 -- Copy the hole line where the curser is
-vim.keymap.set("n", "<A-p>", "Vyp<ESC>") 
+vim.keymap.set("n", "<A-p>", "Vyp<ESC>")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Move text up and down
