@@ -51,3 +51,10 @@ vim.keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
 -- LazyGit --
 vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>")
+
+
+-- Nvim Terminal remapping --
+vim.keymap.set("n", "<leader>t", "terminal<ESC>")
+vim.keymap.set("n", "<leader>ts", ":abov terminal<ESC>")
+vim.keymap.set("n", "<leader>tc", "")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
