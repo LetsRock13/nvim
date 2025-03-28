@@ -36,6 +36,7 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("i", "<C-c>", "<ESC><ESC>")
 -- Add a new line without insert mode
 vim.keymap.set("n", "<A-o>", "o<ESC><ESC>")
+vim.keymap.set("n", "<A-O>", "O<ESC><ESC>")
 -- Copy the hole line where the curser is
 vim.keymap.set("n", "<A-p>", "Vyp<ESC><ESC>")
 vim.keymap.set("n", "Q", "<nop>")
