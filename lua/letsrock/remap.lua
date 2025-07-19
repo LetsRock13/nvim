@@ -33,12 +33,12 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
-vim.keymap.set("i", "<C-c>", "<ESC><ESC>")
+vim.keymap.set("i", "<C-c>", "<ESC>")
 -- Add a new line without insert mode
 vim.keymap.set("n", "<A-o>", "o<ESC><ESC>")
 vim.keymap.set("n", "<A-O>", "O<ESC><ESC>")
 -- Copy the hole line where the curser is
-vim.keymap.set("n", "<A-p>", "Vyp<ESC><ESC>")
+vim.keymap.set("n", "<A-p>", "Vyp<ESC>")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Move text up and down
@@ -58,7 +58,7 @@ vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>")
 
 
 -- Nvim Terminal remapping --
-vim.keymap.set("n", "<leader>t", "terminal<ESC><ESC>")
-vim.keymap.set("n", "<leader>ts", ":abov terminal<ESC><ESC>")
+vim.keymap.set("n", "<leader>t", "terminal<ESC>")
+vim.keymap.set("n", "<leader>ts", ":abov terminal<ESC>")
 vim.keymap.set("n", "<leader>tc", "")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
