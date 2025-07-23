@@ -58,6 +58,7 @@ return {
 		dependencies = { "rafamadriz/friendly-snippets" },
 	},
 	{ 'saadparwaiz1/cmp_luasnip' },
+	{"atiladefreitas/dooing"},
 }
 
 
