@@ -59,6 +59,22 @@ return {
 	},
 	{ 'saadparwaiz1/cmp_luasnip' },
 	{"atiladefreitas/dooing"},
+	{
+		"GustavEikaas/easy-dotnet.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", 'nvim-telescope/telescope.nvim', },
+	},
+	{
+		'nvim-lualine/lualine.nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' }
+	},
+	{
+		'mfussenegger/nvim-dap'
+	},
+	{
+		"seblyng/roslyn.nvim",
+    	---@module 'roslyn.config'
+    	---@type RoslynNvimConfig
+	}
 }
 
 
