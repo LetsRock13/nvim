@@ -59,6 +59,10 @@ return {
 	},
 	{ 'saadparwaiz1/cmp_luasnip' },
 	{"atiladefreitas/dooing"},
+		{
+		'nvim-lualine/lualine.nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' }
+	}
 }
 
 
