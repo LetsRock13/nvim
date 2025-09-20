@@ -107,14 +107,14 @@ dotnet.setup({
       background_scanning = true,
       notifications = {
         --Set this to false if you have configured lualine to avoid double logging
-        handler = function(start_event)
-          local spinner = require("easy-dotnet.ui-modules.spinner").new()
-          spinner:start_spinner(start_event.job.name)
-          ---@param finished_event JobEvent
-          return function(finished_event)
-            spinner:stop_spinner(finished_event.result.text, finished_event.result.level)
-          end
-        end,
+        --handler = function(start_event)
+        --  local spinner = require("easy-dotnet.ui-modules.spinner").new()
+        --  spinner:start_spinner(start_event.job.name)
+        --  ---@param finished_event JobEvent
+        --  return function(finished_event)
+        --    spinner:stop_spinner(finished_event.result.text, finished_event.result.level)
+        --  end
+        --end,
       },
 })
 
