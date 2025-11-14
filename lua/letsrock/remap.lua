@@ -62,3 +62,9 @@ vim.keymap.set("n", "<leader>t", "terminal<ESC>")
 vim.keymap.set("n", "<leader>ts", ":abov terminal<ESC>")
 vim.keymap.set("n", "<leader>tc", "")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+-- Nvim Buffer Mapping
+vim.keymap.set("n", "<leader>bn", ":bn<CR>") -- Next Buffer
+vim.keymap.set("n", "<leader>bp", ":bp<CR>") -- Previous Buffer
+vim.keymap.set("n", "<leader>bf", ":bf<CR>") -- First Buffer
+vim.keymap.set("n", "<leader>bd", ":bdelete<CR>") -- Delete current Buffe
+
