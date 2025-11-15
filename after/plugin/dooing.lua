@@ -40,7 +40,7 @@ require("dooing").setup({
 	},
 
 	quick_keys = true,      -- Quick keys window
-	
+
 	notes = {
 		icon = "📓",
 	},
