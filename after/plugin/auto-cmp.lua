@@ -32,6 +32,7 @@ local kind_icons = {
 }
 
 local cmp = require 'cmp'
+cmp.register_source("easy-dotnet", require("easy-dotnet").package_completion_source)
 cmp.setup({
   snippet = {
 	 expand = function(args)
@@ -86,6 +87,7 @@ cmp.setup({
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
+	{ name = 'easy-dotnet' },
     -- For ultisnips users
     { name = 'ultisnips' },
     -- For vsnip users, uncomment the following.

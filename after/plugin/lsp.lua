@@ -37,6 +37,5 @@ cmp.setup({
       -- You need Neovim v0.10 to use vim.snippet
       require('luasnip').lsp_expand(args.body)
     end
-  }
+  },
 })
-
