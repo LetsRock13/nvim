@@ -1,13 +1,9 @@
 local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-require('mason').setup({
-	registries = {
-        "github:mason-org/mason-registry",
-        "github:Crashdummyy/mason-registry",
-    }
-})
+require('mason').setup({})
+
 require('mason-lspconfig').setup({
-	ensure_installed = {'rust_analyzer', 'jdtls', 'clangd', 'ast_grep', 'lua_ls'}, -- , 'lua_ls'
+	ensure_installed = {'jdtls', 'clangd', 'ast_grep', 'lua_ls'}, -- , 'lua_ls'
 	handlers = {
 		function(server_name)
 			require('lspconfig')[server_name].setup({
