@@ -18,10 +18,19 @@ return {
 	 branch = 'harpoon2',
 	 dependencies = {'nvim-lua/plenary.nvim'}
 	},
-	{'mbbill/undotree'},
-	-- Load everything for the lsp config
+	{'mbbill/undotree'}, -- Load everything for the lsp config
 	{'williamboman/mason.nvim'},
 	{'williamboman/mason-lspconfig.nvim'},
+	{
+		-- https://github.com/AlexandrosAlexiou/kotlin.nvim
+		'AlexandrosAlexiou/kotlin.nvim',
+		dependencies = {
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+			"stevearc/oil.nvim",
+			"folke/trouble.nvim",
+    	},
+	},
 	-- Autocomplition
 	{'neovim/nvim-lspconfig'},
 	{'SirVer/ultisnips'},
@@ -63,6 +72,7 @@ return {
 		dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
 }
+
 
 
 
