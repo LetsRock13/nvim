@@ -27,7 +27,7 @@ treesitter.setup({
     install_dir = vim.fn.stdpath('data') .. '/site'
 })
 
-treesitter.install({ 
+treesitter.install({
     "java",
     "python",
     "bash",

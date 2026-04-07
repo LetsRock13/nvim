@@ -1,5 +1,5 @@
 -- list of options
-local listofOptions = { 
+local listofOptions = {
 	number = true,
 	relativenumber = true,
 	numberwidth = 4,
@@ -18,7 +18,6 @@ local listofOptions = {
 	writebackup = false,
 	swapfile = false,
 	termguicolors = true,
-	syntax = on,
 }
 
 -- iterate throug any given option
