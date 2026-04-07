@@ -1,55 +1,51 @@
 -- set leader key
 vim.g.mapleader = " "
-local keymap = vim.keymap
 
-function setRemap(mode, mapping, action)
-    vim.keymap.set(mode, mapping, action)
-end
+local listKeyMap = {
+    -- Set Explore as remap
+    -- setRemap("n", "<leader>pv", vim.cmd.Explore)
+    {"n", "<leader>pv", vim.cmd.Explore},
+    -- Set custom escape for workflow
+    {"i", "jk", "<ESC>"},
+    -- Move Text up and down
+    {"n", "<A-k>", ":m .-2<CR>"}, 
+    {"n", "<A-j>", ":m .+1<CR>"},
+    -- Move hole section in doc
+    {"n", "<C-d>", "<C-d>zz"},
+    {"n", "<C-u>", "<C-u>zz"},
+    -- keep the copied word
+    {"x", "<leader>p", "\"_dP"},
+    -- keep copied from visual mode
+    {"v", "p", "\"_dp"},
+    -- Copy into Clipboard
+    {"n", "<leader>y", "\"+y"},
+    {"v", "<leader>y", "\"+y"},
+    {"n", "<leader>Y", "\"+Y"},
+    -- Add a new line without insert mode
+    {"n", "<A-o>", "o<ESC><ESC>"},
+    {"n", "<A-O>", "O<ESC><ESC>"},
+    -- Copy hole line where the curser is
+    {"n", "<A-p>", "yyp<ESC>"},
+    -- Disable capital Q
+    {"n", "Q", "NOP"},
+    -- Visual Block
+    -- Move text up and down
+    {"x", "<A-j>", ":m '>+1<CR>gv-gv"},
+    {"x", "<A-k>", ":m '<-2<CR>gv-gv"},
+    -- LazyGit
+    {"n", "<leader>lg", ".LazyGit<CR>"},
+}
 
--- Set Explore as remap
-setRemap("n", "<leader>pv", vim.cmd.Explore)
-
--- Set custom escape for workflow
-setRemap("i", "jk", "<ESC>")
-
--- Move Text up and down
-setRemap("n", "<A-j>", ":m .+1<CR>")
-setRemap("n", "<A-k>", ":m .-2<CR>")
-
--- Stay in indent mode
-setRemap("n", "J", ":m .+1<CR>")
-setRemap("n", "<C-d>", "<C-d>zz")
-setRemap("n", "<C-u>", "<C-u>zz")
 -- setRemap("n", "n", "nzzzv")
 -- setRemap("n", "N", "Nzzzv")
 
--- keep the copied word
-setRemap("x", "<leader>p", "\"_dP")
+local function setRemap()
 
--- Copy into Clipboard
-setRemap("n", "<leader>y", "\"+y")
-setRemap("v", "<leader>y", "\"+y")
-setRemap("n", "<leader>Y", "\"+Y")
+    for _, value in ipairs(listKeyMap) do
+        local mode, mapping, action = value[1], value[2], value[3]
+        vim.keymap.set(mode, mapping, action)
+    end
 
--- Add a new line without insert mode
-setRemap("n", "<A-o>", "o<ESC><ESC>")
-setRemap("n", "<A-O>", "O<ESC><ESC>")
+end
 
--- Copy hole line where the curser is
-setRemap("n", "<A-p>", "yyp<ESC>")
-
--- Disable capital Q
-setRemap("n", "Q", "O<ESC><ESC>")
-
--- Move text up and down in visual mode
-setRemap("v", "<A-k>", ":m .-2<CR>==")
-setRemap("v", "<A-j>", ":m .+1<CR>==")
-setRemap("v", "p", "\"_dp")
-
--- Visual Block
--- Move text up and down
-setRemap("x", "J", ":m '>+1<CR>gv-gv")
-setRemap("x", "K", ":m '<-2<CR>gv-gv")
-
--- LazyGit
-setRemap("n", "<leader>lg", ".LazyGit<CR>")
+setRemap()

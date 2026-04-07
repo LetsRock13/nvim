@@ -23,7 +23,7 @@ local listofOptions = {
 
 -- iterate throug any given option
 -- and it's value and set the value
-function setOption()
+local function setOption()
 
   for key, value in pairs(listofOptions) do
      vim.opt[key] = value
