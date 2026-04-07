@@ -59,10 +59,14 @@ return {
 	{
 		"L3MON4D3/LuaSnip",
 		-- follow latest release.
-		--version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 		dependencies = { "rafamadriz/friendly-snippets" },
 	},
 	{ 'saadparwaiz1/cmp_luasnip' },
+	{
+		'nvim-lualine/lualine.nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' }
+	},
 }
 
 
