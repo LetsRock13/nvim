@@ -3,6 +3,7 @@ local listOfPlugins = {
     'mason',
     'lua_ls',
     'mini',
+    'telescope',
 }
 
 local function setPlugins()

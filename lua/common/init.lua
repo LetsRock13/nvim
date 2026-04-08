@@ -7,3 +7,6 @@ require("common.remap")
 
 -- load all plugins
 require("common.plugins")
+
+-- load colorscheme
+vim.cmd.colorscheme('miniwinter')

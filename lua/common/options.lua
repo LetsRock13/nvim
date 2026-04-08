@@ -1,6 +1,5 @@
 -- list of options
 local listofOptions = {
-	number = true,
 	relativenumber = true,
 	numberwidth = 4,
 	hlsearch = false,
