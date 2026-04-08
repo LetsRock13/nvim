@@ -8,7 +8,7 @@ local listKeyMap = {
     -- Set custom escape for workflow
     {"i", "jk", "<ESC>"},
     -- Move Text up and down
-    {"n", "<A-k>", ":m .-2<CR>"}, 
+    {"n", "<A-k>", ":m .-2<CR>"},
     {"n", "<A-j>", ":m .+1<CR>"},
     -- Move hole section in doc
     {"n", "<C-d>", "<C-d>zz"},
