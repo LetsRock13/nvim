@@ -4,6 +4,8 @@ local listOfPlugins = {
     'lua_ls',
     'mini',
     'telescope',
+    'lsp',
+
 }
 
 local function setPlugins()
