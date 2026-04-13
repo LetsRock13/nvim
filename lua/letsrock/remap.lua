@@ -21,6 +21,11 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") -- Schnelles auf abbwert Scrollen
 vim.keymap.set("n", "n", "nzzzv") -- Springe zwischen Gesuchtem auf und ab
 vim.keymap.set("n", "N", "Nzzzv") -- Springe zwischen Gesuchtem auf und ab
 
+-- Stay in v mode for indenting
+vim.keymap.set("v", "<", "<<CR>gv-gv")
+vim.keymap.set("v", ">", "><CR>gv-gv")
+
+
 -- keep the kopied word
 vim.keymap.set("x", "<leader>p", "\"_dP") -- Paset
 
