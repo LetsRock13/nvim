@@ -10,6 +10,9 @@ local listKeyMap = {
     -- Move Text up and down
     {"n", "<A-k>", ":m .-2<CR>"},
     {"n", "<A-j>", ":m .+1<CR>"},
+    -- Stay in visual mode when indent
+    {"v", "<", "<<CR>gv-gv"},
+    {"v", ">", "><CR>gv-gv"},
     -- Move hole section in doc
     {"n", "<C-d>", "<C-d>zz"},
     {"n", "<C-u>", "<C-u>zz"},
