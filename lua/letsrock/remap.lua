@@ -25,6 +25,8 @@ vim.keymap.set("n", "N", "Nzzzv") -- Springe zwischen Gesuchtem auf und ab
 vim.keymap.set("v", "<", "<<CR>gv-gv")
 vim.keymap.set("v", ">", "><CR>gv-gv")
 
+-- Surround word with ""
+vim.keymap.set("n", "<leader>sr", "ciw\"\"<ESC>P")
 
 -- keep the kopied word
 vim.keymap.set("x", "<leader>p", "\"_dP") -- Paset
