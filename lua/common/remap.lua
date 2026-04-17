@@ -37,6 +37,8 @@ local listKeyMap = {
     {"x", "<A-k>", ":m '<-2<CR>gv-gv"},
     -- LazyGit
     {"n", "<leader>lg", ".LazyGit<CR>"},
+    -- sourround
+    {"n", "<leader>sr", "ciw\"\"<ESC>P"},
 }
 
 -- setRemap("n", "n", "nzzzv")
