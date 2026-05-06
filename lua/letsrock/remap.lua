@@ -3,6 +3,8 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Explore)
 
 -- Custom escape sequens
 vim.keymap.set("i", "jk", "<ESC>")
+-- Disabel Kotlin-LSP at current buffer
+vim.keymap.set("n", "<leader>lsp",":lua vim.b.disable_kotlin_lsp = true<CR>")
 
 -- Resize with arrows
 vim.keymap.set("n", "<C-Up>", ":resize -2<CR>")

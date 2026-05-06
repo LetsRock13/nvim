@@ -4,6 +4,9 @@ require('mason').setup({})
 
 require('mason-lspconfig').setup({
 	ensure_installed = {'jdtls', 'clangd', 'ast_grep', 'lua_ls'}, -- , 'lua_ls'
+	automatic_enable = {
+		exclude = { "kotlin-lsp" },
+	},
 	handlers = {
 		function(server_name)
 			require('lspconfig')[server_name].setup({
