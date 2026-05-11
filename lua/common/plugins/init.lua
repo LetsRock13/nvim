@@ -5,7 +5,7 @@ local listOfPlugins = {
     'mini',
     'telescope',
     'lsp',
-
+    'kotlin-lsp',
 }
 
 local function setPlugins()

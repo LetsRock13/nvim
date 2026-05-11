@@ -8,4 +8,7 @@ vim.pack.add({
     'https://github.com/nvim-telescope/telescope.nvim',
     'https://github.com/nvim-lua/plenary.nvim',
     'https://github.com/hrsh7th/nvim-cmp',
+    'https://github.com/AlexandrosAlexiou/kotlin.nvim',
+    'https://github.com/stevearc/oil.nvim',
+    'https://github.com/folke/trouble.nvim',
 })
