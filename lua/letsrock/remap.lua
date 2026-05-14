@@ -3,6 +3,8 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Explore)
 
 -- Custom escape sequens
 vim.keymap.set("i", "jk", "<ESC>")
+-- Disabel Kotlin-LSP at current buffer
+vim.keymap.set("n", "<leader>lsp",":lua vim.b.disable_kotlin_lsp = true<CR>")
 
 -- Resize with arrows
 vim.keymap.set("n", "<C-Up>", ":resize -2<CR>")
@@ -20,6 +22,13 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Schnelles auf abbwert Scrollen
 vim.keymap.set("n", "<C-u>", "<C-u>zz") -- Schnelles auf abbwert Scrollen
 vim.keymap.set("n", "n", "nzzzv") -- Springe zwischen Gesuchtem auf und ab
 vim.keymap.set("n", "N", "Nzzzv") -- Springe zwischen Gesuchtem auf und ab
+
+-- Stay in v mode for indenting
+vim.keymap.set("v", "<", "<<CR>gv-gv")
+vim.keymap.set("v", ">", "><CR>gv-gv")
+
+-- Surround word with ""
+vim.keymap.set("n", "<leader>sr", "ciw\"\"<ESC>P")
 
 -- keep the kopied word
 vim.keymap.set("x", "<leader>p", "\"_dP") -- Paset

@@ -25,5 +25,7 @@ vim.opt.swapfile = false
 
 vim.opt.termguicolors = true
 
+vim.opt.cursorline = true
+
 --vim.g.loaded_netwr = 1
 --vim.g.loaded_netwrPlugin = 1
