@@ -43,7 +43,7 @@ cmp.setup({
       -- require('snippy').expand_snippet(args.body)
       -- For `ultisnips`
       vim.fn["UltiSnips#Anon"](args.body)
-    end,E
+    end,
   },
   formatting = {
 	format = function(entry, vim_item)
