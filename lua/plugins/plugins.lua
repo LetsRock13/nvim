@@ -10,7 +10,11 @@ return {
 			vim.cmd('colorscheme rose-pine')
 		end
 	},
-	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+	{
+		'nvim-treesitter/nvim-treesitter',
+		lazy = false,
+		build = ':TSUpdate'
+	},
 	{ 'nvim-treesitter/playground' },
  	{'nvim-lua/plenary.nvim'},
 	{
@@ -67,6 +71,7 @@ return {
 		'nvim-lualine/lualine.nvim',
 		dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
+	--{'mfussenegger/nvim-dap'}
 }
 
 
