@@ -1,0 +1,6 @@
+vim.cmd('ino " ""<left>')
+vim.cmd('ino \' \'\'<left>')
+vim.cmd('ino ( ()<left>')
+vim.cmd('ino [ []<left>')
+vim.cmd('ino { {}<left>')
+vim.cmd('ino {<CR> {<CR>}<ESC>O')
