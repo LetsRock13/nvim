@@ -3,7 +3,7 @@ local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
-	ensure_installed = {'jdtls', 'clangd', 'ast_grep', 'lua_ls'}, -- , 'lua_ls'
+	ensure_installed = {'jdtls', 'clangd', 'ast_grep', 'lua_ls', 'ols'}, -- , 'lua_ls''kotlin_lsp',
 	automatic_enable = {
 		exclude = { "kotlin-lsp" },
 	},

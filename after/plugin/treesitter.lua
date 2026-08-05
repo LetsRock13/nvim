@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
-  ensure_installed = { "java", "python", "bash", "gdscript", "c", "lua", "vim", "query", "markdown", "markdown_inline", "c_sharp", "sql","nasm", "make", "json", "glsl", "gdshader", "csv", "yaml", "xml" },
+  ensure_installed = { "java", "python", "bash", "gdscript", "c", "lua", "vim", "query", "markdown", "markdown_inline", "c_sharp", "sql","nasm", "make", "json", "glsl", "gdshader", "csv", "yaml", "xml", "kotlin" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = true,
@@ -13,7 +13,7 @@ require'nvim-treesitter.configs'.setup {
   -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
 
   highlight = {
-    enable = false,
+    enable = true,
 
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).

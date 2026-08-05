@@ -31,5 +31,3 @@ cmp.setup({
     end
   },
 })
-
-
