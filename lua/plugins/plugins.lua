@@ -15,7 +15,6 @@ return {
 		lazy = false,
 		build = ':TSUpdate'
 	},
-	{ 'nvim-treesitter/playground' },
  	{'nvim-lua/plenary.nvim'},
 	{
 	 'theprimeagen/harpoon',
@@ -72,6 +71,9 @@ return {
 		dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
 	--{'mfussenegger/nvim-dap'}
+	{
+		'catgoose/nvim-colorizer.lua'
+	}
 }
 
 
