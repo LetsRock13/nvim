@@ -15,14 +15,14 @@ return {
 		lazy = false,
 		build = ':TSUpdate'
 	},
-	{ 'nvim-treesitter/playground' },
  	{'nvim-lua/plenary.nvim'},
 	{
 	 'theprimeagen/harpoon',
 	 branch = 'harpoon2',
 	 dependencies = {'nvim-lua/plenary.nvim'}
 	},
-	{'mbbill/undotree'}, -- Load everything for the lsp config
+	{'mbbill/undotree'},
+	-- Load everything for the lsp config
 	{'williamboman/mason.nvim'},
 	{'williamboman/mason-lspconfig.nvim'},
 	{
@@ -72,6 +72,9 @@ return {
 		dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
 	--{'mfussenegger/nvim-dap'}
+	{
+		'catgoose/nvim-colorizer.lua'
+	}
 }
 
 
