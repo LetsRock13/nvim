@@ -72,4 +72,7 @@ vim.keymap.set("n", "<leader>bd", ":bdelete<CR>") -- Delete current Buffe
 
 -- Make current window/buffer "fullscreen"
 vim.keymap.set("n", "<leader>tt", ":tab split<CR>")
-vim.keymap.set("n", "<leader>tc", ":tabc<CR>")
+vim.keymap.set("n", "<leader>tq", ":tabc<CR>")
+vim.keymap.set("n", "<leader>tp", ":tabprevious<CR>")
+vim.keymap.set("n", "<leader>tc", ":tabnew<CR>")
+vim.keymap.set("n", "<leader>tn", ":tabnext<CR>")
