@@ -17,11 +17,11 @@ return {
 		build = ':TSUpdate'
 	},
  	{'nvim-lua/plenary.nvim'},
-	{
-	 'theprimeagen/harpoon',
-	 branch = 'harpoon2',
-	 dependencies = {'nvim-lua/plenary.nvim'}
-	},
+	-- {
+	--  'theprimeagen/harpoon',
+	--  branch = 'harpoon2',
+	--  dependencies = {'nvim-lua/plenary.nvim'}
+	-- },
 	{'mbbill/undotree'},
 	-- Load everything for the lsp config
 	{'williamboman/mason.nvim'},
