@@ -1,16 +1,3 @@
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'odin',
-  				'java',
-				'kt',
-				'kts',
-				'c',
-				'vim',
-				'lua',
-				'json'
-			},
-  callback = function() vim.treesitter.start() end,
-})
-
 require('nvim-treesitter').setup {
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
   ensure_installed = { "java", "python", "bash", "gdscript", "c", "lua", "vim", "query", "markdown", "markdown_inline", "c_sharp", "sql","nasm", "make", "json", "glsl", "gdshader", "csv", "yaml", "xml", "kotlin", "odin"},
@@ -32,6 +19,26 @@ require('nvim-treesitter').setup {
     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = true,
+    additional_vim_regex_highlighting = false,
   },
 }
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'odin',
+  				'java',
+				'kotlin',
+				'c',
+				'vim',
+				'lua',
+				'json',
+				'markdown'
+			},
+	--callback = function(args)
+	--	local lang = vim.treesitter.language.get_lang(vim.bo[args.buf].filetype)
+
+	--	if lang != nil and vim.treesitter.add(lang) then
+	--		vim.treesitter.start(args.buf, lang)
+	--	end
+	--end
+  callback = function() vim.treesitter.start() end,
+})
