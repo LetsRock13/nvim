@@ -78,6 +78,8 @@ return {
 		---@module 'render-markdown'
 		---@type render.md.UserConfig
 		---opts = {},
+	},
+	{
 	  'stevearc/oil.nvim',
 	  ---@module 'oil'
 	  ---@type oil.SetupOpts
