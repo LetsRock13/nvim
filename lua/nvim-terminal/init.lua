@@ -10,22 +10,16 @@ local function createWin()
 		return
 	end
 
-	local win = vim.api.nvim_open_win(buf, true,
-									{
-										relative='win',
-										width=60,
-										height=20,
-										bufpos={50,30},
-										border='solid'
-									})
-
-	vim.keymap.set("n", "<leader>tg", function ()
-		if win.relative ~= '' then
-			vim.api.nvim_win_close(win, true)
-		end
-	end)
-
-	return win
+	vim.api.nvim_open_win(
+		buf,
+		true,
+		{
+			relative='win',
+			width=60,
+			height=20,
+			bufpos={50,30},
+			border='solid'
+		})
 end
 
 local function main()
@@ -34,6 +28,11 @@ local function main()
 		win = createWin()
 	end)
 
+	vim.keymap.set("n", "<leader>tg", function ()
+		if win.relative ~= '' then
+			vim.api.nvim_win_close(win, true)
+		end
+	end)
 end
 
 
