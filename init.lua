@@ -9,4 +9,4 @@ require("letsrock")
 
 -- for test don't forget to comment it out
 
-require("nvim-terminal")
+-- require("nvim-terminal")

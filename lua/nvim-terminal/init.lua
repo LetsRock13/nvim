@@ -1,39 +1,49 @@
--- Litlte plugin for centralizing the terminal
+-- Litlte plugin for centering the terminal
 
+local win = 0
+local buf = 0
 
-local function createWin()
+local function createFloatTerm()
 
-	local buf = vim.api.nvim_create_buf(false,false)
+	buf = vim.api.nvim_create_buf(false,false)
 
 	if buf == 0 then
 		vim.print("Couldn't create new buffer!")
 		return
 	end
 
-	vim.api.nvim_open_win(
+	win = vim.api.nvim_open_win(
 		buf,
 		true,
 		{
 			relative='win',
-			width=60,
+			width=80,
 			height=20,
-			bufpos={50,30},
-			border='solid'
+			bufpos={10,10},
+			border='rounded'
 		})
+
+	vim.cmd(":terminal")
+
+end
+
+local function hideFloatTerm()
+	-- Hide the window do not close it
+	vim.cmd(":bufhidden buf")
 end
 
 local function main()
 
-	vim.keymap.set("n", "<leader>t", function ()
-		win = createWin()
+	vim.keymap.set("n", "<A-f>", function ()
+			createFloatTerm()
 	end)
 
-	vim.keymap.set("n", "<leader>tg", function ()
-		if win.relative ~= '' then
-			vim.api.nvim_win_close(win, true)
-		end
+	vim.keymap.set("n", "<A-q>", function ()
+			hideFloatTerm()
 	end)
+
+	vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
+
 end
-
 
 main()

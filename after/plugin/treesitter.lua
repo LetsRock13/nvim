@@ -30,6 +30,7 @@ vim.api.nvim_create_autocmd('FileType', {
 				'c',
 				'vim',
 				'lua',
+				'jq',
 				'json',
 				'markdown'
 			},
