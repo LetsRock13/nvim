@@ -32,18 +32,17 @@ local kind_icons = {
 }
 
 local cmp = require 'cmp'
+
 cmp.setup({
   snippet = {
 	 expand = function(args)
-      -- For `vsnip`, uncomment the following.
-      -- vim.fn["vsnip#anonymous"](args.body)
-      -- For `luasnip`, uncomment the following.
-      -- require('luasnip').lsp_expand(args.body)
-      -- For snippy, uncomment the following.
-      -- require('snippy').expand_snippet(args.body)
       -- For `ultisnips`
       vim.fn["UltiSnips#Anon"](args.body)
     end,
+  },
+  window = {
+	  completion = cmp.config.window.bordered(),
+	  documentation = cmp.config.window.bordered(),
   },
   formatting = {
 	format = function(entry, vim_item)
@@ -88,26 +87,18 @@ cmp.setup({
     { name = 'nvim_lsp' },
     -- For ultisnips users
     { name = 'ultisnips' },
-    -- For vsnip users, uncomment the following.
-    -- { name = 'vsnip' },
-    -- For luasnip users, uncomment the following.
-    -- { name = 'luasnip' },
-    -- For snippy users, uncomment the following.
-    -- { name = 'snippy' },
-  }, {
     { name = 'buffer' },
-  }, {
     { name = 'nvim_lsp_signature_help' },
-  }, {
     { name = 'path' },
   })
 })
 
 cmp.setup.cmdline(':', {
-  sources = cmp.config.sources({
-    { name = 'path' },
-    { name = 'cmdline' },
-  })
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = cmp.config.sources({
+		{ name = 'path' },
+    	{ name = 'cmdline' },
+  	})
 })
 
 cmp.setup.cmdline('/', {

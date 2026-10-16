@@ -29,7 +29,7 @@ require("oil").setup({
   -- Send deleted files to the trash instead of permanently deleting them (:help oil-trash)
   delete_to_trash = false,
   -- Skip the confirmation popup for simple operations (:help oil.skip_confirm_for_simple_edits)
-  skip_confirm_for_simple_edits = false,
+  skip_confirm_for_simple_edits = true,
   -- Selecting a new/moved/renamed file or directory will prompt you to save changes first
   -- (:help prompt_save_on_select_new_entry)
   prompt_save_on_select_new_entry = true,
@@ -127,9 +127,9 @@ require("oil").setup({
     -- Padding around the floating window
     padding = 2,
     -- max_width and max_height can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
-    max_width = 50,
-    max_height = 50,
-    border = nil,
+    max_width = 200,
+    max_height = 200,
+    border = "rounded",
     win_options = {
       winblend = 0,
     },
